@@ -331,16 +331,16 @@ angular.module('sotos.crop-image').directive('imageCrop', ['$window', function($
 
                  // draw resize cubes
                 editCanvasCtx.fillStyle = 'rgba(119,206, 238, 0.9)';
-                editCanvasCtx.fillRect(this.x - this.iCSize[0], this.y - this.iCSize[0], this.iCSize[0] * 4, this.iCSize[0] * 4);
-                editCanvasCtx.fillRect(this.x + this.w - this.iCSize[1], this.y - this.iCSize[1], this.iCSize[1] * 4, this.iCSize[1] * 4);
-                editCanvasCtx.fillRect(this.x + this.w - this.iCSize[2], this.y + this.h - this.iCSize[2], this.iCSize[2] * 4, this.iCSize[2] * 4);
-                editCanvasCtx.fillRect(this.x - this.iCSize[3], this.y + this.h - this.iCSize[3], this.iCSize[3] * 4, this.iCSize[3] * 4);
+                editCanvasCtx.fillRect(this.x - this.iCSize[0], this.y - this.iCSize[0], this.iCSize[0] * 5, this.iCSize[0] * 5);
+                editCanvasCtx.fillRect(this.x + this.w - this.iCSize[1], this.y - this.iCSize[1], this.iCSize[1] * 5, this.iCSize[1] * 5);
+                editCanvasCtx.fillRect(this.x + this.w - this.iCSize[2], this.y + this.h - this.iCSize[2], this.iCSize[2] * 5, this.iCSize[2] * 5);
+                editCanvasCtx.fillRect(this.x - this.iCSize[3], this.y + this.h - this.iCSize[3], this.iCSize[3] * 5, this.iCSize[3] * 5);
 
                 editCanvasCtx.lineWidth = 1;
-                editCanvasCtx.strokeRect(this.x - this.iCSize[0], this.y - this.iCSize[0], this.iCSize[0] * 4, this.iCSize[0] * 4);
-                editCanvasCtx.strokeRect(this.x + this.w - this.iCSize[1], this.y - this.iCSize[1], this.iCSize[1] * 4, this.iCSize[1] * 4);
-                editCanvasCtx.strokeRect(this.x + this.w - this.iCSize[2], this.y + this.h - this.iCSize[2], this.iCSize[2] * 4, this.iCSize[2] * 4);
-                editCanvasCtx.strokeRect(this.x - this.iCSize[3], this.y + this.h - this.iCSize[3], this.iCSize[3] * 4, this.iCSize[3] * 4);
+                editCanvasCtx.strokeRect(this.x - this.iCSize[0], this.y - this.iCSize[0], this.iCSize[0] * 5, this.iCSize[0] * 5);
+                editCanvasCtx.strokeRect(this.x + this.w - this.iCSize[1], this.y - this.iCSize[1], this.iCSize[1] * 5, this.iCSize[1] * 5);
+                editCanvasCtx.strokeRect(this.x + this.w - this.iCSize[2], this.y + this.h - this.iCSize[2], this.iCSize[2] * 5, this.iCSize[2] * 5);
+                editCanvasCtx.strokeRect(this.x - this.iCSize[3], this.y + this.h - this.iCSize[3], this.iCSize[3] * 5, this.iCSize[3] * 5);
 
             };
 
