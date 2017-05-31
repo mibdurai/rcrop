@@ -760,26 +760,26 @@ angular.module('sotos.crop-image').directive('editCrop', ['$window',function($wi
                 cropCtrl.theSelection.ratioSize =6;
 
                 // hovering over resize cubes
-                if (iMouseX >  cropCtrl.theSelection.x -  cropCtrl.theSelection.csizeh*1.5 && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.csizeh*1.5 &&
-                    iMouseY >  cropCtrl.theSelection.y -  cropCtrl.theSelection.csizeh && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.csizeh*1.5) {
+                if (iMouseX >  cropCtrl.theSelection.x -  cropCtrl.theSelection.csizeh*1.75 && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.csizeh*1.75 &&
+                    iMouseY >  cropCtrl.theSelection.y -  cropCtrl.theSelection.csizeh && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.csizeh*1.75) {
 
                      cropCtrl.theSelection.bHow[0] = true;
                      cropCtrl.theSelection.iCSize[0] =  cropCtrl.theSelection.csizeh;
                 }
-                if (iMouseX >  cropCtrl.theSelection.x +  cropCtrl.theSelection.w- cropCtrl.theSelection.csizeh*1.5 && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.w +  cropCtrl.theSelection.csizeh*1.5 &&
-                    iMouseY >  cropCtrl.theSelection.y -  cropCtrl.theSelection.csizeh*1.5 && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.csizeh*1.5) {
+                if (iMouseX >  cropCtrl.theSelection.x +  cropCtrl.theSelection.w- cropCtrl.theSelection.csizeh*1.75 && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.w +  cropCtrl.theSelection.csizeh*1.75 &&
+                    iMouseY >  cropCtrl.theSelection.y -  cropCtrl.theSelection.csizeh*1.75 && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.csizeh*1.75) {
 
                      cropCtrl.theSelection.bHow[1] = true;
                      cropCtrl.theSelection.iCSize[1] =  cropCtrl.theSelection.csizeh;
                 }
-                if (iMouseX >  cropCtrl.theSelection.x +  cropCtrl.theSelection.w- cropCtrl.theSelection.csizeh*1.5 && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.w +  cropCtrl.theSelection.csizeh*1.5 &&
-                    iMouseY >  cropCtrl.theSelection.y +  cropCtrl.theSelection.h- cropCtrl.theSelection.csizeh*1.5 && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.h +  cropCtrl.theSelection.csizeh*1.5) {
+                if (iMouseX >  cropCtrl.theSelection.x +  cropCtrl.theSelection.w- cropCtrl.theSelection.csizeh*1.75 && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.w +  cropCtrl.theSelection.csizeh*1.75 &&
+                    iMouseY >  cropCtrl.theSelection.y +  cropCtrl.theSelection.h- cropCtrl.theSelection.csizeh*1.75 && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.h +  cropCtrl.theSelection.csizeh*1.75) {
 
                      cropCtrl.theSelection.bHow[2] = true;
                      cropCtrl.theSelection.iCSize[2] =  cropCtrl.theSelection.csizeh;
                 }
-                if (iMouseX >  cropCtrl.theSelection.x -  cropCtrl.theSelection.csizeh*1.5 && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.csizeh*1.5 &&
-                    iMouseY >  cropCtrl.theSelection.y +  cropCtrl.theSelection.h- cropCtrl.theSelection.csizeh*1.5 && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.h +  cropCtrl.theSelection.csizeh*1.5) {
+                if (iMouseX >  cropCtrl.theSelection.x -  cropCtrl.theSelection.csizeh*1.75 && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.csizeh*1.75 &&
+                    iMouseY >  cropCtrl.theSelection.y +  cropCtrl.theSelection.h- cropCtrl.theSelection.csizeh*1.75 && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.h +  cropCtrl.theSelection.csizeh*1.75) {
 
                      cropCtrl.theSelection.bHow[3] = true;
                      cropCtrl.theSelection.iCSize[3] =  cropCtrl.theSelection.csizeh;
