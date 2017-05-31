@@ -661,7 +661,7 @@ angular.module('sotos.crop-image').directive('editCrop', ['$window',function($wi
             var iMouseX=0;
             var iMouseY=1;
             var myPos;
-            var isTouch=false;
+            var isTouch=true;
 
             var canvasEdit=cropCtrl.getEditCanvas();
 
