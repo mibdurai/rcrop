@@ -331,16 +331,16 @@ angular.module('sotos.crop-image').directive('imageCrop', ['$window', function($
 
                  // draw resize cubes
                 editCanvasCtx.fillStyle = 'rgba(119,206, 238, 0.9)';
-                editCanvasCtx.fillRect(this.x - this.iCSize[0], this.y - this.iCSize[0], this.iCSize[0] * 5, this.iCSize[0] * 5);
-                editCanvasCtx.fillRect(this.x + this.w - this.iCSize[1], this.y - this.iCSize[1], this.iCSize[1] * 5, this.iCSize[1] * 5);
-                editCanvasCtx.fillRect(this.x + this.w - this.iCSize[2], this.y + this.h - this.iCSize[2], this.iCSize[2] * 5, this.iCSize[2] * 5);
-                editCanvasCtx.fillRect(this.x - this.iCSize[3], this.y + this.h - this.iCSize[3], this.iCSize[3] * 5, this.iCSize[3] * 5);
+                editCanvasCtx.fillRect(this.x - this.iCSize[0], this.y - this.iCSize[0], this.iCSize[0] * 2, this.iCSize[0] * 2);
+                editCanvasCtx.fillRect(this.x + this.w - this.iCSize[1], this.y - this.iCSize[1], this.iCSize[1] * 2, this.iCSize[1] * 2);
+                editCanvasCtx.fillRect(this.x + this.w - this.iCSize[2], this.y + this.h - this.iCSize[2], this.iCSize[2] * 2, this.iCSize[2] * 2);
+                editCanvasCtx.fillRect(this.x - this.iCSize[3], this.y + this.h - this.iCSize[3], this.iCSize[3] * 2, this.iCSize[3] * 2);
 
                 editCanvasCtx.lineWidth = 1;
-                editCanvasCtx.strokeRect(this.x - this.iCSize[0], this.y - this.iCSize[0], this.iCSize[0] * 5, this.iCSize[0] * 5);
-                editCanvasCtx.strokeRect(this.x + this.w - this.iCSize[1], this.y - this.iCSize[1], this.iCSize[1] * 5, this.iCSize[1] * 5);
-                editCanvasCtx.strokeRect(this.x + this.w - this.iCSize[2], this.y + this.h - this.iCSize[2], this.iCSize[2] * 5, this.iCSize[2] * 5);
-                editCanvasCtx.strokeRect(this.x - this.iCSize[3], this.y + this.h - this.iCSize[3], this.iCSize[3] * 5, this.iCSize[3] * 5);
+                editCanvasCtx.strokeRect(this.x - this.iCSize[0], this.y - this.iCSize[0], this.iCSize[0] * 2, this.iCSize[0] * 2);
+                editCanvasCtx.strokeRect(this.x + this.w - this.iCSize[1], this.y - this.iCSize[1], this.iCSize[1] * 2, this.iCSize[1] * 2);
+                editCanvasCtx.strokeRect(this.x + this.w - this.iCSize[2], this.y + this.h - this.iCSize[2], this.iCSize[2] * 2, this.iCSize[2] * 2);
+                editCanvasCtx.strokeRect(this.x - this.iCSize[3], this.y + this.h - this.iCSize[3], this.iCSize[3] * 2, this.iCSize[3] * 2);
 
             };
 
@@ -491,7 +491,7 @@ angular.module('sotos.crop-image').directive('imageCrop', ['$window', function($
 
 
             //create the selection
-            var  theSelection =  new SelectionCrop(100,100,140,150);
+            var  theSelection =  new SelectionCrop(50,50,50,50);
 
 
 
@@ -661,7 +661,7 @@ angular.module('sotos.crop-image').directive('editCrop', ['$window',function($wi
             var iMouseX=0;
             var iMouseY=1;
             var myPos;
-            var isTouch=true;
+            var isTouch=false;
 
             var canvasEdit=cropCtrl.getEditCanvas();
 
@@ -760,26 +760,22 @@ angular.module('sotos.crop-image').directive('editCrop', ['$window',function($wi
                 cropCtrl.theSelection.ratioSize =6;
 
                 // hovering over resize cubes
-                if (iMouseX >  cropCtrl.theSelection.x -  cropCtrl.theSelection.csizeh && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.csizeh &&
-                    iMouseY >  cropCtrl.theSelection.y -  cropCtrl.theSelection.csizeh && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.csizeh) {
+                if (true) {
 
                      cropCtrl.theSelection.bHow[0] = true;
                      cropCtrl.theSelection.iCSize[0] =  cropCtrl.theSelection.csizeh;
                 }
-                if (iMouseX >  cropCtrl.theSelection.x +  cropCtrl.theSelection.w- cropCtrl.theSelection.csizeh && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.w +  cropCtrl.theSelection.csizeh &&
-                    iMouseY >  cropCtrl.theSelection.y -  cropCtrl.theSelection.csizeh && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.csizeh) {
+                 if (true){
 
                      cropCtrl.theSelection.bHow[1] = true;
                      cropCtrl.theSelection.iCSize[1] =  cropCtrl.theSelection.csizeh;
                 }
-                if (iMouseX >  cropCtrl.theSelection.x +  cropCtrl.theSelection.w- cropCtrl.theSelection.csizeh && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.w +  cropCtrl.theSelection.csizeh &&
-                    iMouseY >  cropCtrl.theSelection.y +  cropCtrl.theSelection.h- cropCtrl.theSelection.csizeh && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.h +  cropCtrl.theSelection.csizeh) {
+                 if (true){
 
                      cropCtrl.theSelection.bHow[2] = true;
                      cropCtrl.theSelection.iCSize[2] =  cropCtrl.theSelection.csizeh;
                 }
-                if (iMouseX >  cropCtrl.theSelection.x -  cropCtrl.theSelection.csizeh && iMouseX <  cropCtrl.theSelection.x +  cropCtrl.theSelection.csizeh &&
-                    iMouseY >  cropCtrl.theSelection.y +  cropCtrl.theSelection.h- cropCtrl.theSelection.csizeh && iMouseY <  cropCtrl.theSelection.y +  cropCtrl.theSelection.h +  cropCtrl.theSelection.csizeh) {
+                 if (true){
 
                      cropCtrl.theSelection.bHow[3] = true;
                      cropCtrl.theSelection.iCSize[3] =  cropCtrl.theSelection.csizeh;
